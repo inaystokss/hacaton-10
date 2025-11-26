@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+  <div class="min-h-screen bg-gradient-to-br from-tan-900 via-tan-900 to-tan-800">
     <div class="h-16"></div>
     
     <div class="max-w-7xl mx-auto px-6 py-8">
@@ -7,15 +7,15 @@
       <div class="mb-8">
         <div class="flex items-center justify-between">
           <div>
-            <div class="inline-flex items-center px-4 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 backdrop-blur-sm mb-4">
-              <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
-              <span class="text-cyan-400 text-sm font-mono uppercase tracking-widest">INTERACTIVE MAP</span>
+            <div class="inline-flex items-center px-4 py-2 rounded-2xl bg-brown-500/10 border border-brown-500/20 backdrop-blur-sm mb-4">
+              <div class="w-2 h-2 bg-slate-400 rounded-full mr-3 animate-pulse"></div>
+              <span class="text-amber-400 text-sm font-mono uppercase tracking-widest">INTERACTIVE MAP</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-400 mb-3">
               Water Bodies
-              <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Map</span>
+              <span class="bg-gradient-to-r from-cyan-400 to-amber-500 bg-clip-text text-transparent">Map</span>
             </h1>
-            <p class="text-xl text-slate-300 max-w-2xl">
+            <p class="text-xl text-amber-300 max-w-2xl">
               Explore the geographical distribution of North Kazakhstan's water monitoring stations
             </p>
           </div>
@@ -264,7 +264,7 @@ const resetView = () => {
 
 /* Map container adjustments */
 .leaflet-container {
-  background: #0f172a;
+  background: #e1d8c5;
 }
 
 .leaflet-popup-content-wrapper {

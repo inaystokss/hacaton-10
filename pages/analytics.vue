@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+  <div class="min-h-screen bg-gradient-to-br from-beige-100 via-beige-200 to-beige-300">
     <div class="h-16"></div>
     
     <div class="max-w-7xl mx-auto px-6 py-8">
@@ -11,9 +11,9 @@
               <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
               <span class="text-cyan-400 text-sm font-mono uppercase tracking-widest">LIVE ANALYTICS DASHBOARD</span>
             </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-400 mb-3">
               Water Intelligence
-              <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Platform</span>
+              <span class="bg-gradient-to-r from-cyan-400 to-amber-500 bg-clip-text text-transparent">Platform</span>
             </h1>
             <p class="text-xl text-slate-300 max-w-2xl">
               Real-time monitoring and analytics for North Kazakhstan's water ecosystem

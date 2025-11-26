@@ -19,7 +19,7 @@
             <div class="space-y-6">
               <h1 class="text-5xl  md:text-5xl lg:text-6xl font-bold leading-tight
               bg-clip-text text-transparent
-              bg-gradient-to-r from-gray-700 to-stone-700">
+              bg-gradient-to-r from-gray-700 to-black-700">
                 Water
   
               Intelligence
@@ -36,11 +36,11 @@
             <!-- Stats Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-md">
               <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group">
-                <div class="text-2xl font-bold text-white mb-1 group-hover:scale-110 transition-transform">{{ lakes.length }}</div>
+                <div class="text-2xl font-bold text-gray-400 mb-1 group-hover:scale-110 transition-transform">{{ lakes.length }}</div>
                 <div class="text-xs text-slate-400 uppercase tracking-wider">Water Bodies</div>
               </div>
               <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group">
-                <div class="text-2xl font-bold text-white mb-1 group-hover:scale-110 transition-transform">{{ lakes.filter(l => l.status === 'lake').length }}</div>
+                <div class="text-2xl font-bold text-blue-300 mb-1 group-hover:scale-110 transition-transform">{{ lakes.filter(l => l.status === 'lake').length }}</div>
                 <div class="text-xs text-slate-400 uppercase tracking-wider">Lakes</div>
               </div>
               <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group">
@@ -51,7 +51,7 @@
 
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4">
-              <NuxtLink to="/map" class="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-amber-500 rounded-2xl text-white font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
+              <NuxtLink to="/map" class="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-amber-500 rounded-2xl text-gray-400 font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
                 <span>Explore Interactive Map</span>
               </NuxtLink>
               
@@ -60,7 +60,6 @@
               </NuxtLink>
             </div>
           </div>
-
           <!-- Right Content - Data Visualization -->
           <div class="relative">
             <div class="relative bg-slate-200/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 shadow-2xl">
@@ -105,7 +104,7 @@
 
               <!-- Quick Stats -->
               <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-700/50">
-                <div class="text-center"><div class="text-xl font-bold text-white">{{ lakes.length }}</div><div class="text-xs text-slate-400 mt-1">Total</div></div>
+                <div class="text-center"><div class="text-xl font-bold text-gray-400">{{ lakes.length }}</div><div class="text-xs text-slate-400 mt-1">Total</div></div>
                 <div class="text-center"><div class="text-xl font-bold text-cyan-400">{{ lakes.filter(l => l.status === 'lake').length }}</div><div class="text-xs text-slate-400 mt-1">Lakes</div></div>
                 <div class="text-center"><div class="text-xl font-bold text-green-400">{{ lakes.filter(l => l.status === 'river').length }}</div><div class="text-xs text-slate-400 mt-1">Rivers</div></div>
               </div>
@@ -136,8 +135,20 @@ onMounted(async () => {
   }
 })
 </script>
-
 <style>
+/* Фон всей страницы */
+.relative.min-h-screen {
+  background-color: #f5f5dc; /* beige */
+}
+
+/* Центрируем заголовок в блоке карты */
+.relative .bg-slate-200/30 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tooltip для карты */
 .custom-mini-tooltip .leaflet-tooltip {
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
@@ -147,12 +158,4 @@ onMounted(async () => {
   font-size: 0.75rem;
   padding: 4px 8px;
 }
-.leaflet-container { background: #0f172a; }.
-leaflet-control-zoom a {
-  background: rgba(30,41,59,0.8) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(100,116,139,0.3) !important;
-  color: #cbd5e1 !important;
-}
-.leaflet-control-zoom a:hover { background: rgba(51,65,85,0.8) !important; }
 </style>
