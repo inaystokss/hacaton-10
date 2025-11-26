@@ -142,11 +142,11 @@ onMounted(async () => {
 }
 
 /* Центрируем заголовок в блоке карты */
-.relative .bg-slate-200/30 {
+/* .relative .bg-slate-200/30 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* Tooltip для карты */
 .custom-mini-tooltip .leaflet-tooltip {
